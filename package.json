@@ -21,6 +21,7 @@
     "analogue-time-picker": "^1.0.2",
     "antd": "^5.20.0",
     "autoprefixer": "^10.4.20",
+    "cross-env": "^7.0.3",
     "dom-to-image-more": "^3.4.5",
     "env-cmd": "^10.1.0",
     "fabric": "^6.1.0",
@@ -39,14 +40,14 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "env-cmd -e development cross-env NODE_ENV=development webpack serve",
+    "start": "../PyUIBuilder/node_modules/.bin/env-cmd -e development cross-env NODE_ENV=development webpack serve",
     "build": "NODE_ENV=production webpack",
-    "build:local": "env-cmd -e production cross-env NODE_ENV=production webpack",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "start:tailwind": "cross-env NODE_ENV=development tailwindcss --postcss -i ./landingpages/tailwind/tailwind.css -o ./landingpages/tailwind/tailwind-runtime.css -w",
-    "build:tailwind": "cross-env NODE_ENV=production tailwindcss --postcss -i ./landingpages/tailwind/tailwind.css -o ./landingpages/tailwind/tailwind-build.css --minify",
-    "docs:serve": "docsify serve ./docs/"
+    "build:local": "../PyUIBuilder/node_modules/.bin/env-cmd -e production cross-env NODE_ENV=production webpack",
+    "test": "../PyUIBuilder/node_modules/.bin/react-scripts test",
+    "eject": "../PyUIBuilder/node_modules/.bin/react-scripts eject",
+    "start:tailwind": "../PyUIBuilder/node_modules/.bin/cross-env NODE_ENV=development tailwindcss --postcss -i ./landingpages/tailwind/tailwind.css -o ./landingpages/tailwind/tailwind-runtime.css -w",
+    "build:tailwind": "../PyUIBuilder/node_modules/.bin/cross-env NODE_ENV=production tailwindcss --postcss -i ./landingpages/tailwind/tailwind.css -o ./landingpages/tailwind/tailwind-build.css --minify",
+    "docs:serve": "../PyUIBuilder/node_modules/.bin/docsify serve ./docs/"
   },
   "eslintConfig": {
     "extends": [
